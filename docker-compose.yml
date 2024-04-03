@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    volumes:
+      - static:/app/backend/static
+      - media:/app/backend/media
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+      - POSTGRES_PORT=5432
+    volumes:
+      - postgres_db:/var/lib/postgresql/data/
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - frontend:/app/frontend/build
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - static:/static
+      - media:/media
+      - frontend:/frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - app-network
+
+volumes:
+  static:
+  media:
+  postgres_db:
+  frontend:
+
+networks:
+  app-network:
+    driver: bridge
