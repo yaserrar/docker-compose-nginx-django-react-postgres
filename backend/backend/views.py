@@ -12,7 +12,7 @@ def send_some_data(request):
     return Response({"data": "Hello from django backend"})
 
 
-class MediaAccess(APIView):
+class MediaAccessView(APIView):
     def get(self, request, path):
         token = request.query_params.get("token")
 
