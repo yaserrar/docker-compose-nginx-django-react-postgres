@@ -1,6 +1,6 @@
 # Docker compose + Django + Postgres + React + Nginx
 
-![img](./img.jpg)
+![docker](./img.jpg)
 
 ### 1. Description
 
