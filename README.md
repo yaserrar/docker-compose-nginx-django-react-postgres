@@ -51,3 +51,4 @@ set up environment variables for react and django, look at the .env.example
 
 `cd docker-compose-nginx-django-react-postgres`
 `docker compose p --build -d`
+`dcoker ps`
