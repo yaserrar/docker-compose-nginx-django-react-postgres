@@ -26,7 +26,11 @@ this is a standard django rest framework app, but also serves media files and pr
 
 ###### III. frontend
 
+this is a standard react app that connect to the django rest framework api.
+
 ###### IV. database
+
+this is a postgres database that is only accessile from inside docker network.
 
 ### 3. Prerequisites
 
