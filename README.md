@@ -8,6 +8,24 @@ This project demonstrates how to deploy a django react app with postgres db usin
 
 ### 2. Explanation
 
+teh docker compose file containes 4 services:
+
+###### I. nginx
+
+this service serves 4 things
+
+- static files
+- protected media files
+- django admin
+- django api
+- frontend
+
+###### II. backend
+
+###### III. frontend
+
+###### IV. database
+
 ### 3. Prerequisites
 
 - Docker and docker compose
