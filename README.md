@@ -6,12 +6,14 @@
 
 This project demonstrates how to deploy a django react app with postgres db using nginx and docker compose.
 
-### 2. Prerequisites
+### 2. Explanation
+
+### 3. Prerequisites
 
 - Docker and docker compose
 - Git to clone the repo
 
-### 3. Set up
+### 4. Set up
 
 ###### Clone the repo:
 
