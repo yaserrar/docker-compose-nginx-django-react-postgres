@@ -22,6 +22,8 @@ this service serves 4 things
 
 ###### II. backend
 
+this is a standard django rest framework app, but also serves media files and protect then, so only authenticated users can access files using presigned urls that expires after a while, it's similar to how amazon aws works
+
 ###### III. frontend
 
 ###### IV. database
