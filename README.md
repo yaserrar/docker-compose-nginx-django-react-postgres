@@ -10,7 +10,7 @@ This project demonstrates how to deploy a django react app with postgres db usin
 
 teh docker compose file containes 4 services:
 
-###### I. nginx
+#### I. nginx
 
 this service serves 4 things
 
@@ -20,15 +20,15 @@ this service serves 4 things
 - django api
 - frontend
 
-###### II. backend
+#### II. backend
 
 this is a standard django rest framework app, but also serves media files and protect then, so only authenticated users can access files using presigned urls that expires after a while, it's similar to how amazon aws works
 
-###### III. frontend
+#### III. frontend
 
 this is a standard react app that connect to the django rest framework api.
 
-###### IV. database
+#### IV. database
 
 this is a postgres database that is only accessile from inside docker network.
 
