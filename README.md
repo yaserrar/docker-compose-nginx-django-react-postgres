@@ -32,6 +32,10 @@ this is a standard react app that connect to the django rest framework api.
 
 this is a postgres database that is only accessile from inside docker network.
 
+#### V. pgadmin
+
+this is a pgadmin service that allows you to interact with the postgres db using web interface.
+
 ### 3. Prerequisites
 
 - Docker and docker compose
