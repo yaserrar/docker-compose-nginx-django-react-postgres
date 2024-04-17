@@ -19,7 +19,7 @@ services:
     image: postgres:15
     restart: always
     env_file:
-      - ./backend/.env
+      - ./db/.env
     volumes:
       - postgres_db:/var/lib/postgresql/data/
     networks:
